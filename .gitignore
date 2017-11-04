@@ -1,0 +1,5 @@
+lib/libssl.so
+lib/libcrypto.so
+lib/libmxnet.so
+android/libs/support-v4-19.0.1.jar
+mxnet
