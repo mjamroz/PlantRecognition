@@ -70,8 +70,8 @@ Item {
 
                 Label {
                     id: name_latinska
-                    font.weight: Font.ExtraLight
-                    font.pixelSize: 16
+                    font.weight: Font.ExtraBold
+                    font.pixelSize: 22
                     anchors.horizontalCenter: parent.horizontalCenter
                     text: modelData.name_lat
                 }
@@ -89,7 +89,7 @@ Item {
                     MouseArea {
                         anchors.fill: parent
                         onClicked: {
-                            stackView.push(Qt.resolvedUrl("PlantView.qml"), {plant_id: modelData.plant_id})
+                            //stackView.push(Qt.resolvedUrl("PlantView.qml"), {plant_id: modelData.plant_id})
                         }
                     }
                 }
@@ -97,7 +97,13 @@ Item {
                     anchors.horizontalCenter: parent.horizontalCenter
                     font.weight: Font.ExtraLight
                     font.pixelSize: 8
-                    text: 'Photo author: ' + modelData.author + '(Licence: '+modelData.lic+')'
+                    text: 'Photo author: ' + modelData.author
+                }
+                Label {
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    font.weight: Font.ExtraLight
+                    font.pixelSize: 8
+                    text: 'Licence: '+modelData.lic
                 }
             }
         }
